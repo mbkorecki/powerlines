@@ -148,16 +148,17 @@
     color: rgba(30,43,47,0.75);
   }
   .close-btn {
-    position: absolute;
-    top: 18px;
-    right: 22px;
-    width: 38px;
-    height: 38px;
+    position: fixed;
+    top: max(14px, env(safe-area-inset-top, 0px));
+    right: max(14px, env(safe-area-inset-right, 0px));
+    z-index: 100;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     border: none;
-    background: rgba(30, 43, 47, 0.08);
+    background: rgba(30, 43, 47, 0.14);
     color: var(--ink);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -167,8 +168,9 @@
   .close-btn:hover { background: rgba(30, 43, 47, 0.16); }
 
   @media (max-width: 720px) {
-    .modal { flex-direction: column; max-height: 90vh; overflow-y: auto; }
-    .frame img { max-width: 84vw; max-height: 50vh; }
+    .overlay { padding: 64px 4vw 4vh; align-items: flex-start; overflow-y: auto; }
+    .modal { flex-direction: column; max-height: none; }
+    .frame img { max-width: 92vw; max-height: 60vh; }
     .caption { max-width: none; margin-left: 0; margin-top: 2px; }
   }
 </style>
@@ -196,8 +198,7 @@
 </div>
 
 <div>
-  "near the day of P U R I F I C A T I O N, there will be cobwebs spun back and forth in the sky." <br>there is a conspiracy at play that i have attempted to map out. <br>through the lines the precession of power may be traced, spied on, and followed all the way to the top.
-  <br><a href="https://mbkorecki.github.io">authorship</a>
+"near the day of P U R I F I C A T I O N, there will be cobwebs spun back and forth in the sky." <br>there is a conspiracy at play that i have attempted to map out. <br>through the lines the precession of power may be traced, spied on, and followed all the way to the top.
 </div>
 
 
